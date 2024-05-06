@@ -101,13 +101,13 @@ tit=pd.read_csv("titanic_dataset.csv")
 tit
 ```
 ![Screenshot 2024-05-06 160632](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/85bbe2e0-26d9-48f4-a525-dba9676dec9e)
-
 ```
 plt.figure(figsize=(8,5))
 sns.barplot(x='Embarked', y='Fare', data=tit, palette='rainbow') 
 plt.title("Fare of Passenger by Embarked Town")
 ```
-![Screenshot 2024-05-06 160632](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/a5b64d1a-f1c6-4a13-918e-f730c34d7aca)
+![Screenshot 2024-05-06 201319](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/04aef0b1-40bc-4ed1-8712-39b11bc5c8de)
+
 ```
 plt.figure(figsize=(8,5))
 sns.barplot(x='Embarked', y='Fare', data=tit, palette='rainbow', hue='Pclass') 
@@ -168,7 +168,36 @@ mart
 mart=mart[['PassengerId', 'Survived', 'Age', 'Name', 'Ticket', 'Embarked']] 
 mart.head(10)
 ```
-
+![Screenshot 2024-05-06 201504](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/047ec4fb-77ef-4904-9336-4c36470af5ca)
+```
+sns.kdeplot(data=mart,x='PassengerId')
+```
+![Screenshot 2024-05-06 201559](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/f5e857ca-4b90-4797-9921-009d3801bd42)
+```
+sns.kdeplot(data=mart,x='Age')
+```
+![Screenshot 2024-05-06 201644](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/08ccbb17-85df-44f2-af62-231d19053113)
+```
+sns.kdeplot(data=mart)
+```
+![Screenshot 2024-05-06 201729](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/a3a4a863-dafb-4267-be4f-89f875c8594a)
+```
+sns.kdeplot(data=mart,x='PassengerId',hue='Survived',multiple='stack')
+```
+![Screenshot 2024-05-06 201824](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/3464c54e-9040-42dd-8bdc-4e8307ea657c)
+```
+sns.kdeplot(data=mart,x='PassengerId',y='Survived')
+```
+![Screenshot 2024-05-06 201911](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/af4205be-34da-4900-968d-dcd16a430976)
+```
+data = np.random.randint(low = 1, high = 100, size = (10,10))
+hm=sns.heatmap(data=data,annot=True)
+```
+![Screenshot 2024-05-06 201946](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/39c01876-fb2e-41e1-8e58-49e786960738)
+```
+hm=sns.heatmap(data=data)
+```
+![Screenshot 2024-05-06 202023](https://github.com/Anusharonselva/EXNO-6-DS/assets/119405600/01ef62a5-40a0-4c78-aaac-d2183ea2609b)
 
 # Result:
- Include your result here
+Thus, all the data visualization techniques of seaborn has been implemented.
